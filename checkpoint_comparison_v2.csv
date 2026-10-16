@@ -1,0 +1,4 @@
+Policy,Success rate (%),Average checks,Propagated steps,Recoveries
+No checkpoint,10.4,0.0,6.38,0.0
+Fixed checkpoint,100.0,5.0,2.837,1.827
+Risk-triggered checkpoint,65.3,2.978,4.025,1.181
