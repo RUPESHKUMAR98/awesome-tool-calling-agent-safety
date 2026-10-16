@@ -536,6 +536,26 @@ awesome-chained-tool-calling-agents/
 This structure follows the repository organization recommended in the assignment.
 
 ---
+## Simulation Results
+
+This project includes a preliminary simulation comparing three checkpoint policies in chained tool-calling workflows.
+
+- **No checkpoint:** The workflow runs without checkpoint-based recovery.
+- **Fixed checkpoint:** The workflow checks at predefined intervals.
+- **Risk-triggered checkpoint:** The workflow checks when a simulated risk flag is triggered.
+
+### Results and Visualization
+
+The simulation results are available in [`checkpoint_comparison_v2.csv`](checkpoint_comparison_v2.csv).
+
+The success-rate graph is shown below:
+
+![Success Rate by Checkpoint Policy](checkpoint_success_rate.png)
+
+**Important limitation:** These results come from a simplified simulation and depend on the assumptions implemented in the code. They should not be interpreted as evidence of real-world agent performance.
+
+---
+
 
 ## License
 
