@@ -1,0 +1,14 @@
+# Baseline Validation
+
+## Purpose
+To verify that the simulated failure generator behaves correctly at extreme failure probabilities.
+
+## Tests
+- Failure probability 0.0: No simulated steps should fail.
+- Failure probability 1.0: All simulated steps should fail.
+
+## Status
+Record the tests as passed only after running the code and confirming both assertions succeed.
+
+## Limitation
+These tests validate the random failure generator only. They do not establish that checkpoint detection, error propagation, recovery, or the full comparison model is correct.
