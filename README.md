@@ -556,6 +556,16 @@ The success-rate graph is shown below:
 
 ---
 
+### Sensitivity Analysis
+
+The simulation evaluates three checkpoint policies at failure probabilities of 0.0, 0.1, 0.2, 0.3, and 0.4.
+
+**Results files:**
+- [Sensitivity Analysis Graph](results/sensitivity_analysis.png)
+- [Sensitivity Analysis Results (CSV)](results/sensitivity_analysis_results.csv)
+
+This experiment examines how simulated failure probability affects workflow success. The results depend on the simulation's assumptions and should not be generalized directly to real-world tool-calling agents.
+
 
 ## License
 
