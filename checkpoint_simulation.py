@@ -89,3 +89,9 @@ results_v2 = [
 
 comparison_v2 = pd.DataFrame(results_v2)
 display(comparison_v2)
+comparison_v2.to_csv(
+    "checkpoint_comparison_v2.csv",
+    index=False
+)
+
+print("Simulation results saved successfully.")
