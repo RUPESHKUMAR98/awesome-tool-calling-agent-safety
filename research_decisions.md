@@ -28,3 +28,39 @@ The research brief has been saved. The simulation has not yet been implemented o
 
 ## 8. Next Action
 Create a small Python simulation and verify that it behaves correctly under controlled success and failure cases.
+## Simulation Methodology and Limitations
+
+### Simulation Setup
+
+The preliminary experiment compares three checkpoint policies in a simulated chained tool-calling workflow:
+
+1. **No checkpoint:** No checkpoint-based recovery is performed.
+2. **Fixed checkpoint:** Checkpoints occur at predefined intervals.
+3. **Risk-triggered checkpoint:** Checkpoints are triggered by simulated risk flags.
+
+The simulation uses 1,000 trials, 10 workflow steps per trial, a configured failure probability of 0.2, a configured risk-flag probability of 0.3, and a fixed checkpoint interval of 2 steps.
+
+### Metrics
+
+The simulation records:
+
+- Successful workflow rate
+- Average number of checks
+- Average number of propagated steps
+- Average number of recoveries
+
+### Preliminary Results
+
+In the current simulation run, the observed success rates were:
+
+| Policy | Success rate |
+|---|---:|
+| No checkpoint | 10.4% |
+| Fixed checkpoint | 100.0% |
+| Risk-triggered checkpoint | 65.3% |
+
+### Limitations
+
+These results depend on the simulation's assumptions and implementation. In particular, checkpoint recovery is simplified, and risk-triggered checks depend on simulated risk flags rather than a real error detector. The results therefore should not be generalized to real-world AI agents.
+
+Future work should test alternative parameter settings, validate the recovery assumptions, and examine how checkpoint policies affect execution overhead and failure propagation.
