@@ -95,3 +95,45 @@ comparison_v2.to_csv(
 )
 
 print("Simulation results saved successfully.")
+
+
+# Sensitivity analysis: vary failure probability
+
+sensitivity_results = []
+failure_values = [0.0, 0.1, 0.2, 0.3, 0.4]
+
+for p in failure_values:
+    random.seed(42)
+    sensitivity_scenarios = []
+
+    for run in range(N):
+        failures = [
+            random.random() < p
+            for _ in range(STEPS)
+        ]
+        risk_flags = [
+            random.random() < RISK_PROBABILITY
+            for _ in range(STEPS)
+        ]
+        sensitivity_scenarios.append((failures, risk_flags))
+
+    for policy in [
+        "No checkpoint",
+        "Fixed checkpoint",
+        "Risk-triggered checkpoint"
+    ]:
+        result = simulate(policy, sensitivity_scenarios)
+        result["Failure probability"] = p
+        sensitivity_results.append(result)
+
+sensitivity_df = pd.DataFrame(sensitivity_results)
+
+sensitivity_df.to_csv(
+    "sensitivity_analysis_results.csv",
+    index=False
+)
+
+display(sensitivity_df)
+
+print("Sensitivity analysis saved successfully.")
+
