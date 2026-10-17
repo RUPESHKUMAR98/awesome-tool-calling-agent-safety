@@ -1,0 +1,16 @@
+Failure probability,Policy,Result.Policy,Result.Success rate (%),Result.Average checks,Result.Propagated steps,Result.Recoveries
+0.0,No checkpoint,No checkpoint,100.0,0.0,0.0,0.0
+0.0,Fixed checkpoint,Fixed checkpoint,100.0,5.0,0.0,0.0
+0.0,Risk-triggered checkpoint,Risk-triggered checkpoint,100.0,2.987,0.0,0.0
+0.1,No checkpoint,No checkpoint,30.4,0.0,4.343,0.0
+0.1,Fixed checkpoint,Fixed checkpoint,100.0,5.0,1.542,1.014
+0.1,Risk-triggered checkpoint,Risk-triggered checkpoint,79.7,2.904,2.419,0.709
+0.2,No checkpoint,No checkpoint,9.7,0.0,6.539,0.0
+0.2,Fixed checkpoint,Fixed checkpoint,100.0,5.0,2.898,1.859
+0.2,Risk-triggered checkpoint,Risk-triggered checkpoint,69.5,2.998,4.025,1.235
+0.3,No checkpoint,No checkpoint,2.8,0.0,7.747,0.0
+0.3,Fixed checkpoint,Fixed checkpoint,100.0,5.0,4.052,2.562
+0.3,Risk-triggered checkpoint,Risk-triggered checkpoint,56.8,2.999,5.301,1.579
+0.4,No checkpoint,No checkpoint,0.3,0.0,8.558,0.0
+0.4,Fixed checkpoint,Fixed checkpoint,100.0,5.0,5.247,3.231
+0.4,Risk-triggered checkpoint,Risk-triggered checkpoint,53.7,3.052,6.372,1.983
