@@ -64,3 +64,13 @@ In the current simulation run, the observed success rates were:
 These results depend on the simulation's assumptions and implementation. In particular, checkpoint recovery is simplified, and risk-triggered checks depend on simulated risk flags rather than a real error detector. The results therefore should not be generalized to real-world AI agents.
 
 Future work should test alternative parameter settings, validate the recovery assumptions, and examine how checkpoint policies affect execution overhead and failure propagation.
+## Sensitivity Analysis
+
+### Experimental Setup
+A sensitivity analysis was conducted using five failure-probability settings: 0.0, 0.1, 0.2, 0.3, and 0.4. The simulation used 1,000 trials and 10 steps per workflow. The three checkpoint policies evaluated were no checkpoint, fixed checkpoint, and risk-triggered checkpoint.
+
+### Observed Results
+The simulation results show that the no-checkpoint policy becomes less successful as the failure probability increases. The fixed-checkpoint policy maintains a 100% success rate under the current deterministic recovery assumptions. The risk-triggered policy also shows declining success rates as failure probability increases.
+
+### Interpretation and Limitations
+These results illustrate how checkpoint policies behave under the selected synthetic simulation settings. They should not be interpreted as proof of performance in real-world tool-calling agents. Risk flags are generated synthetically rather than from a validated error detector, and checkpoint recovery is simplified. Further experiments should test different checkpoint intervals, recovery assumptions, and risk-flag quality.
