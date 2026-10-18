@@ -11,7 +11,7 @@ This folder contains the preliminary simulation results and sensitivity analysis
 
 ### Sensitivity Analysis
 
-- `sensitivity_analysis_results.csv` — numerical results for failure probabilities of 0.0, 0.1, 0.2, 0.3, and 0.4 across the three checkpoint policies.
+- sensitivity_analysis_results (1).csv — numerical results for failure probabilities of 0.0, 0.1, 0.2, 0.3, and 0.4 across the three checkpoint policies.
 - `sensitivity_analysis.png` — graph showing how simulated success rates change as failure probability increases.
 
 ## Methodology
