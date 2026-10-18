@@ -588,3 +588,42 @@ This repository was developed as part of the **AI Tools for Research — GitHub 
 > **Build, document, curate, verify, maintain, and share a structured research knowledge resource on safe and reliable chained tool-calling agents.**
 
 The ultimate goal is to understand not only **how agents use tools**, but also **when they should verify a result, when they should recover, when human intervention is required, and when autonomous execution should stop**.
+
+## Reproducing the Checkpoint Simulation
+
+### Requirements
+- Python 3
+- pandas
+- matplotlib
+
+### Setup
+
+Install the dependencies:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### Run the experiment
+
+Run the simulation script:
+
+```bash
+python checkpoint_simulation.py
+```
+
+### Experimental configuration
+
+- Number of simulation runs: 1,000
+- Workflow steps per run: 10
+- Random seed: 42
+- Failure probability: 0.2
+- Risk-flag probability: 0.3
+- Fixed checkpoint interval: every 2 steps
+
+### Interpretation and limitations
+
+The experiment uses synthetic failures and risk flags. Risk flags are not validated error detectors, and checkpoints are assumed to repair corrupted state deterministically. Therefore, the results illustrate the behavior of this simulation rather than establish real-world agent performance.
+
+For reproducibility, retain the generated CSV files and figures alongside the simulation code. Verify that a fresh run produces outputs consistent with the committed results.
+
