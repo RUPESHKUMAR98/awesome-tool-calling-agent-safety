@@ -1,14 +1,24 @@
 # Baseline Validation
 
 ## Purpose
-To verify that the simulated failure generator behaves correctly at extreme failure probabilities.
+To verify that the simulated random failure generator behaves correctly at extreme failure probabilities.
 
-## Tests
-- Failure probability 0.0: No simulated steps should fail.
-- Failure probability 1.0: All simulated steps should fail.
+## Tests Performed
 
-## Status
-Record the tests as passed only after running the code and confirming both assertions succeed.
+### Test 1: Failure Probability = 0.0
+- **Expected:** No simulated steps should fail.
+- **Observed:** No failures occurred.
+- **Status:** PASSED.
 
-## Limitation
-These tests validate the random failure generator only. They do not establish that checkpoint detection, error propagation, recovery, or the full comparison model is correct.
+### Test 2: Failure Probability = 1.0
+- **Expected:** Every simulated step should fail.
+- **Observed:** All simulated steps failed.
+- **Status:** PASSED.
+
+## Validation Scope
+Both tests were executed in Google Colab using Python assertions. The assertions passed for the random failure generator at the two extreme probabilities.
+
+## Limitations
+These tests validate only the random failure generator. They do not establish that checkpoint detection, error propagation, recovery behavior, or the full comparison model is correct. Further testing is needed to validate those components.
+
+The experiment uses synthetic failures and risk flags; results should not be interpreted as evidence of real-world agent performance.
