@@ -22,13 +22,15 @@ All policies will be tested using comparable workflow scenarios and documented e
 
 ## 6. Reproducibility
 The project will record configuration settings, random seeds, code, and experimental results so that runs can be repeated.
-
 ## 7. Current Status
-The research brief has been saved. The simulation has not yet been implemented or validated.
+
+The research brief and experimental decisions have been documented. A preliminary Python simulation has been implemented to compare no-checkpoint, fixed-checkpoint, and risk-triggered-checkpoint policies. The simulation records success rate, average checks, propagated steps, and recoveries. Baseline validation tests for the random failure generator have been documented as passed. Preliminary comparison results and sensitivity-analysis results have also been generated.
+
+Further validation of checkpoint detection, failure propagation, recovery behavior, and the full comparison model remains necessary. The simulation uses synthetic failures and simplified recovery assumptions.
 
 ## 8. Next Action
-Create a small Python simulation and verify that it behaves correctly under controlled success and failure cases.
-## Simulation Methodology and Limitations
+
+Complete the remaining validation of the checkpoint policies, verify that the recorded results match the simulation code, review the sensitivity-analysis results, and document the experimental findings, reproducibility steps, and limitations. Ensure that all required code, result files, graphs, and documentation are available in the GitHub repository.
 
 ### Simulation Setup
 
